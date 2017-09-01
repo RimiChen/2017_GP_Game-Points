@@ -16,10 +16,13 @@
 	<!-- 3rd parties -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<!-- settings -->
+
+    <!-- settings -->
 <script src="settings_variables/data_structures.js"></script>
 <script src="settings_variables/global_settings.js"></script>
     <!-- self defined scripts -->
+    
+    
     <!-- game and main loop -->
 <script src="sample_games/sample_alchemy.js"></script>
 <script src="main_game_loop.js"></script>
@@ -30,7 +33,16 @@
 </head>
 
 <!-- change update function and draw function to create new games -->
-<body onload = "main_game_loop.initialize(sample_alchemy.draw, sample_alchemy.update, 1000)">
+<body onload = 
+    "main_game_loop.initialize(
+        'ALCHEMY',
+        sample_alchemy.initial_checking,
+        sample_alchemy.settings,
+        sample_alchemy.draw,
+        sample_alchemy.update,
+        1000
+    )"
+>
 
 </body>
 

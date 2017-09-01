@@ -1,5 +1,22 @@
 //// this script doesn't allow to use any functions except game customize parts. It combines engine functions to create different games
 var sample_alchemy = ( function(){
+    var initial_checking = function(){
+        console.log("==Game: this funciton check all of initial settings of the system.");
+    
+        ////check all of the scripts are reachable
+
+        //<script src="settings_variables/data_structures.js"></script>
+        data_structures.initialize();
+        //<script src="settings_variables/global_settings.js"></script>
+        global_settings.initialize();
+
+        
+    }
+    var settings = function(){
+        console.log("==Game: this is the SETTING funciton of game \'alchemy\'.");
+
+        //put game content in here, update data and computation results.
+    };
     var update = function(){
         console.log("==Game: this is the UPDATE funciton of game \'alchemy\'.");
 
@@ -12,6 +29,8 @@ var sample_alchemy = ( function(){
     };
     //customize functions
     return{
+        initial_checking: initial_checking,
+        settings: settings,
         update: update,
         draw: draw
     }

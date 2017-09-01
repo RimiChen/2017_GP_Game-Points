@@ -3,12 +3,8 @@ var data_structures = ( function(){
         //checking setting correct
         console.log("==System: loading script for data structures--game objects");
     };
-    var main_function = function(){
-
-    };
     return{
-        initialize: initialize,
-        main_function: main_function
+        initialize: initialize
     }
 
 })();
