@@ -10,7 +10,7 @@ var global_settings = ( function(){
         //list all variable name set
         console.log("==Help: g_settings : contains settings of window height and width.");
     }
-    return = {
+    return{
         initialize: initialize,
         main_function: main_function,
         post_global_variable_sets_names: post_global_variable_sets_names

@@ -8,29 +8,29 @@
 
 <!-- css files -->
 	<!-- 3rd parties -->
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <!-- self defined styles -->
 
 
 <!-- script files -->
 	<!-- 3rd parties -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<!-- settings -->
-<script src="./settings_variables/data_structures.js"></script>
-<script src="./settings_variables/global_settings.js"></script>
+<script src="settings_variables/data_structures.js"></script>
+<script src="settings_variables/global_settings.js"></script>
     <!-- self defined scripts -->
     <!-- game and main loop -->
-<script src="./sample_games/sample_alchemy.js"></script>
-<script src="./main_game_joop.js"></script>
+<script src="sample_games/sample_alchemy.js"></script>
+<script src="main_game_loop.js"></script>
 
 
 
 
 </head>
 
-
-<body onload = "main_game_loop.initialize()">
+<!-- change update function and draw function to create new games -->
+<body onload = "main_game_loop.initialize(sample_alchemy.draw, sample_alchemy.update, 1000)">
 
 </body>
 

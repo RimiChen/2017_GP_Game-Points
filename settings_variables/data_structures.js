@@ -5,8 +5,8 @@ var data_structures = ( function(){
     };
     var main_function = function(){
 
-    }
-    return = {
+    };
+    return{
         initialize: initialize,
         main_function: main_function
     }
