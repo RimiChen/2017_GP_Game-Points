@@ -1,4 +1,5 @@
 var global_settings = ( function(){
+   
     var initialize = function(){
         //checking setting correct
         console.log("==System: loading global setting variables.");
@@ -21,6 +22,7 @@ var global_settings = ( function(){
     var set_view_port = function(new_width, new_height){
         g_settings.main_frame_width = new_width;
         g_settings.main_frame_height = new_height;
+        g_components.game_view_port = new Object_container("game_view_port", "body", 0, 0, -100, new_width, new_height);
     };
     var set_window_background_color = function(new_r, new_g, new_b, new_a){
         new_color = "rgba( "+new_r+", "+new_g+", "+new_b+", "+new_a+" )";
@@ -49,4 +51,6 @@ var g_settings = {
 
 } ;
 
-
+var g_components = {
+    game_view_port: null
+}

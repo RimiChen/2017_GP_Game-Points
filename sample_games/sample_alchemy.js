@@ -20,6 +20,8 @@ var sample_alchemy = ( function(){
     var settings = function(){
         console.log("==Game: this is the SETTING funciton of game \'alchemy\'.");
 
+        // set windows
+        global_settings.set_view_port(1300, 900);
         //put game initial settins in here, such as loading images.
         //image_pool.add_new_image("fire", "fire.png");
         //image_pool.add_new_image("water", "water.png");

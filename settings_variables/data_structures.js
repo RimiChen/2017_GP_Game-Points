@@ -130,10 +130,53 @@ function Game_objects( object_id, object_x, object_y, object_w, object_h, object
 
 
 }
-function Object_container(container_name, container_x, container_y, container_w, container_h){
+function Object_container(container_name, parent_frame, container_x, container_y, container_deepth, container_w, container_h){
+    this.create = function(container_name, parent_frame, container_x, container_y, container_deepth, container_w, container_h){
+        console.log("==Container: create "+container_name+" to "+parent_frame);
+        ////TO DO: check whether the container exist
+		var new_container = document.createElement("div");
+		new_container.id = container_name;
+		new_container.class = "Container";
+        /*
+        new_container.addEventListener('click', function(event){
+        });
+        */
+
+        
+        if(parent_frame == "body"){
+            //the outer frame
+            document.body.appendChild( new_container );
+        }
+        else{
+            $( "#"+parent_frame ).append( new_container );
+        }
+
+        $("#"+new_container.id).css({
+			top: container_y + "px",
+			left: container_x + "px",
+			position:'absolute',
+			height: container_h + "px",
+			width: container_w + "px",
+            zIndex: container_deepth,
+            overflow: "hidden",
+            clear: "both",
+            //test code
+            backgroundColor: "rgba(0, 0, 0, 0.1)",
+            
+            textAlign: "center"
+        });
+    };
+    this.create(container_name, parent_frame, container_x, container_y, container_deepth, container_w, container_h);
+    // assign parameters
     this.name = container_name;
     this.x = container_x;
     this.y = container_y;
     this.w = container_w;
     this.h = container_h;
+    this.depth = container_deepth;
+
+    this.remove = function(){
+        //remove itself
+    }
 }
+

@@ -1,4 +1,4 @@
-var system_register = ( function(){
+var name_register = ( function(){
     var initialize = function(){
         //checking setting correct
         console.log("==System: loading name register of the system.");
