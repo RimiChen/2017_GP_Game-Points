@@ -5,7 +5,7 @@ var global_settings = ( function(){
     };
 
 
-    var post_global_variable_sets_names = function(){
+    var post_global_variables = function(){
         //report system current settins
         console.log("==System:\n"
             +"VIEW PORT WIDTH: " + g_settings.main_frame_width +"\n"
@@ -31,7 +31,7 @@ var global_settings = ( function(){
 
     return{
         initialize: initialize,
-        post_global_variable_sets_names: post_global_variable_sets_names,
+        post_global_variables: post_global_variables,
         set_view_port: set_view_port,
         set_window_background_color: set_window_background_color
     }
@@ -48,3 +48,5 @@ var g_settings = {
     window_background_color: "rgba(0, 0, 0, 1)"
 
 } ;
+
+

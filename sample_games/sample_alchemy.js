@@ -10,8 +10,12 @@ var sample_alchemy = ( function(){
         data_structures.initialize();
         //<script src="settings_variables/global_settings.js"></script>
         global_settings.initialize();
+        //<script src="settings_variables/name_register.js"></script>
+        name_register.initialize();
         //<script src="materials/image_source.js"></script>
         image_source.initialize();
+        //<script src="shared_functions/shared_functions.js"></script>
+        shared_functions.initialize();
     }
     var settings = function(){
         console.log("==Game: this is the SETTING funciton of game \'alchemy\'.");

@@ -113,8 +113,27 @@ function Game_objects( object_id, object_x, object_y, object_w, object_h, object
             console.log("==Object: fail to add sprite for "+this.id+".");
         }
     }
-    this.clear_sprite = function(){
-        this.sprite = null;
-    }
 
+    //control functions
+    this.behavior_list["click"] = null;
+    //// listen to click event
+    this.addEventListener('click', function(event){
+        console.log("==Object: trigger click function.");
+        if(this.behavior_list["click"] != null){
+            //because click is a preserved function, cannot check existence.
+            this.execute_behavior("click");
+        }
+        else{
+            console.log("==Object: click function is not defined,");
+        }
+    });
+
+
+}
+function Object_container(container_name, container_x, container_y, container_w, container_h){
+    this.name = container_name;
+    this.x = container_x;
+    this.y = container_y;
+    this.w = container_w;
+    this.h = container_h;
 }
